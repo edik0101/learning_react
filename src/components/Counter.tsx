@@ -28,7 +28,11 @@ export default function Counter({ init, end }: CounterProps) {
             <div className={styles.div}>Счетчик : {count}</div>
             <br />
             {end && count >= end ? (
-                <b> Counter stoped</b>
+                //Первый указывает на то, что вы используете JavaScript-код в JSX, в то время как второй указывает на начало используемого объекта JavaScript.
+                <b style={{ color: 'red', fontSize: '20px' }}>
+                    {' '}
+                    Counter stoped
+                </b>
             ) : (
                 <i>Counter in progress</i>
             )}
