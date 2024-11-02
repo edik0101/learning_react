@@ -7,14 +7,16 @@ function App() {
     return (
         <>
             {/* комментарий */}
-            {[0, 1, 2].map(function (i) {
+            {[...Array(3).keys()].map(function (i) {
+                const val = i <2 ? '1' : '0';
+                console.log(val);
                 return (
                     <React.Fragment key={i}>
                         Counter {i} defined by{' '}
-                        {`<Counter init='5'
+                        {`<Counter autostart='${val}' init='0'
                             end='${10 + i} />`}{' '}
                         : <br />
-                        <Counter init={5} end={10 + i} />
+                        <Counter autostart={val} init={0} end={10 + i} />
                         <br />
                         <br />
                     </React.Fragment>
